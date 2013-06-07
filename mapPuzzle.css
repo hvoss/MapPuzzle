@@ -1,0 +1,61 @@
+#jigsawPieces, #jigsaw {
+	margin: 20px;
+	position: relative;
+}
+
+#jigsawPieces {
+	border: 2px solid red;
+	float: left;
+}
+
+#jigsaw {
+	border: 2px solid green;
+	float: left;
+}
+
+.jigsawPiece {
+	border: 1px solid black;
+	cursor: move;
+	position: absolute;
+}
+
+.jigsawPiecePlace {
+	/* border: 1px solid black; */
+	float: left;
+	position: absolute;
+}
+
+.jigsawPiecePlace .jigsawPiece {
+	border: 0px;
+}
+
+
+#poiList li {
+	cursor: pointer;
+}
+
+#poiList {
+	float: left;
+}
+
+#map {
+	height: 200px; 
+	width: 200px; 
+	float: left;
+}
+
+#footer {
+	clear: both;
+}
+
+#layerSelection {
+	clear: both;
+	list-style-type: none;
+}
+
+#layerSelection img {
+	width: 150px;
+	float: left;
+	border: 2px black solid;
+	margin: 3px;
+}

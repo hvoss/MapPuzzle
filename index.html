@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Map Puzzle</title>
+    <meta charset="utf-8">
+
+    <script src="jquery-1.9.1.js"></script>
+    <script src="jquery-ui-1.10.3.custom.js"></script>
+    <script src="jquery.overlaps.js"></script>
+    <script src="jquery.cover.js"></script>
+    <script src="lib/OpenLayers.js"></script>
+    <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.1"></script>
+
+    <script src="mapPuzzle.js"></script>
+    <link rel="stylesheet" type="text/css" href="mapPuzzle.css" />
+  </head>
+  <body>
+  	<h1>Map Puzzle</h1>
+
+	<div id="pages">
+  		<div id="pageSelection">
+        <div style="clear: both">
+    			<p>Bitte wählen Sie einen Ausschnitt aus:</p>
+    			<div id="map"></div>
+        </div>
+
+        <div style="clear: both">
+          <h2>Interessante Punkte</h2>
+    			<ul id="poiList"></ul>
+        </div>
+
+        <div style="clear: both">
+          <h2>Puzzle erstellen</h2>
+          <label for="complexity">Schwierigkeit (leicht - schwer):</label>
+          <input id="complexity" type="range" min="1" max="4" step="1" value="1" />
+          <input type="button" id="createJigsaw" value="Puzzle erstellen" onClick="createJigsaw();" /> 
+        </div>
+
+
+        <div id="layerSelection" style="clear: both">
+          <h2>Art der Kartendarstellung</h2>
+          <ul></ul>
+        </div>
+        
+
+  		
+  		</div>
+
+  		<div id="pageJigsaw" style="display: none;">
+		  	<div id="jigsawPieces"></div>
+		  	<div id="jigsaw"></div>
+
+		  	<input type="button" onclick="alert(checkJigsaw());" value="Check!" />
+        <input type="button" onclick="gotoSelection();" value="Zurück zur Auswahl!" />
+  		</div>
+  	</div>
+
+  	<div id="footer">
+  		Henrik Voß - Hochschule Bremen <a href="dokumentation.html">Dokumentation</a>
+  	</div>
+
+  </body>
+</html>
